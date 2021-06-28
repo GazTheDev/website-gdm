@@ -11,35 +11,23 @@ export default function ContactPage() {
             <div className='w-full max-w-md m-auto bg-white rounded-lg border border-primaryBorder shadow-default py-10 px-16'>
                 <h1 className='text-2xl font-medium text-primary mt-4 mb-12 text-center'>
                     Contact Me                 </h1>
+                    <form action="/message-sent"class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 "name="contact" netlify>
+                    <input type="hidden" name="form-name" value="contact" />
 
-                <form>
-                    <div>
-                        <label htmlFor='email'>Email</label>
-                        <input
-                            type='email'
-                            className={`w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4`}
-                            id='email'
-                            placeholder='Your Email'
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor='textarea'>Message</label>
-                        <input
-                            type='textarea'
-                            className={`w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4`}
-                            id='textarea'
-                            placeholder='Message'
-                        />
-                    </div>
-
-                    <div className='flex justify-center items-center mt-6'>
-                        <button
-                            className={`bg-blue py-2 px-4 text-sm text-white rounded border border-green focus:outline-none focus:border-green-dark`}
-                        >
-                            Send Message
-                        </button>
-                    </div>
-                </form>
+  <p>
+    <label class="block text-gray-700 text-sm font-bold mb-2">Name <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="name" /></label>
+  </p>
+  <p>
+    <label class="block text-gray-700 text-sm font-bold mb-2">Email <input class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="email" name="email" /></label>
+  </p>
+  <p>
+    <label class="block" >Message   <textarea name="message"class="form-textarea mt-1 block w-full" rows="3" placeholder="Enter your message here"></textarea>
+ </label>
+  </p>
+  <p>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Send</button>
+  </p>
+</form>
             </div>
         </div>
 
